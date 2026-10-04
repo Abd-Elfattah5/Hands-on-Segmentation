@@ -4,7 +4,7 @@
 **Assignment**: `docs/CYCV002.pdf` (task code CVCY002, "Computer Vision Engineer")
 **Sibling repos to copy conventions from**: `/home/amousa1/Projects/Hands-on DDPM` (most recent, preferred) and `/home/amousa1/Projects/Hands-on VAE`
 **Created**: 2026-10-03 · **Deadline**: 2026-10-04 night (about 28 h from creation)
-**Status**: Skeleton only. Venv, folder layout, ported utils, CLI stub, this handoff. No model, data or training code yet.
+**Status (2026-10-04)**: Implemented, trained and evaluated (test IoU 0.9035, Dice 0.9470). Report and README written. Personal photos done (EXIF-orientation and HEIC fixes added). Architecture docs added (`ARCHITECTURE_DEEP_DIVE.md`, `Architecture_visualization.jpg`, `architectural_enhancements_taxonomy.html`, `CONTEXT.md`, ADR 0001). Remaining: run graphify, commit `graphify-out/`, create the GitHub repo and push. The local T2000 is free for the DDPM benchmark.
 
 ---
 
@@ -25,17 +25,17 @@ It says the system must reach "the minimum required performance" **but gives no 
 
 | PDF item | Planned implementation | Done |
 |---|---|---|
-| 1a Choose a proper dataset | ATR human parsing (primary) or Clothing Co-Parsing / Kaggle "People Clothing Segmentation" (fallback), see §4 | ☐ |
-| 1b Preprocess + augmentation | Binary clothes mask from garment labels; resize; flip, scale/crop, colour jitter (train only) | ☐ |
-| 2a Train a DL segmentation model | U-Net, BCE + Dice loss | ☐ |
-| 2b Personal-image pipeline | `seg predict --image photo.jpg` → mask PNG, overlay PNG, transparent clothes cut-out | ☐ |
-| 3a Strengths | Per-condition metrics, best-case gallery | ☐ |
-| 3b Drawbacks / wrong segmentation | Worst-case gallery (lowest IoU test images) + failure analysis | ☐ |
-| 3c Limitations / capture conditions | Results on ~10 personal photos; documented conditions (pose, lighting, background, occlusion, resolution) | ☐ |
-| Deliverable: documented script | Docstrings + CLI `--help`; modular `src/` | ☐ |
-| Deliverable: report | `docs/reports/clothes-segmentation-report.md` | ☐ |
-| Deliverable: README | Setup, data download, train, evaluate, predict, tests | ☐ |
-| Minimum performance | Stated target, e.g. test **IoU ≥ 0.80 / Dice ≥ 0.88**, finalized after a baseline run | ☐ |
+| 1a Choose a proper dataset | ATR human parsing via Hugging Face mirror (no Kaggle token needed), 14,164/1,770/1,772 split | ☑ |
+| 1b Preprocess + augmentation | Binary clothes mask (ids 4,5,6,7,8,17); resize 256; flip, rotate, scale, translate, colour jitter (train only) | ☑ |
+| 2a Train a DL segmentation model | ResNet-34 U-Net, BCE + Dice, 15 epochs, 87 min, best val IoU 0.9052 | ☑ |
+| 2b Personal-image pipeline | `seg predict --image photo.jpg` → mask, overlay, RGBA cut-out, panel (verified on test photos) | ☑ |
+| 3a Strengths | Best-case gallery, area breakdown, robustness table (report §7.1) | ☑ |
+| 3b Drawbacks / wrong segmentation | Worst-case gallery + 5 failure modes (report §7.2) | ☑ |
+| 3c Limitations / capture conditions | `seg robustness` (10 simulated conditions) + operating-conditions table (report §7.3) + 5 personal photos (report §8.1) | ☑ |
+| Deliverable: documented script | Docstrings + CLI `--help`; modular `src/`; 15 unit tests pass | ☑ |
+| Deliverable: report | `docs/reports/clothes-segmentation-report.md` | ☑ |
+| Deliverable: README | Setup, data download, train, evaluate, robustness, predict, tests | ☑ |
+| Minimum performance | Target **IoU ≥ 0.80 / Dice ≥ 0.88**; achieved test **IoU 0.9035 / Dice 0.9470** | ☑ |
 
 ## 3. Decisions Already Made (user)
 

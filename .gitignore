@@ -1,0 +1,62 @@
+# Virtual environment
+.venv/
+venv/
+env/
+clothes-unet/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Windows / WSL metadata
+*:Zone.Identifier
+
+# Data & Model Artifacts
+/data/
+artifacts/
+checkpoints/
+runs/
+*.pt
+*.pth
+*.onnx
+*.pdf
+
+# Jupyter Notebook checkpoints (notebooks themselves are tracked)
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+token.txt
+
+# Kaggle credentials
+kaggle.json
+.kaggle/
+
+# Personal test photos (private; keep only the folder)
+samples/personal/*
+!samples/personal/.gitkeep

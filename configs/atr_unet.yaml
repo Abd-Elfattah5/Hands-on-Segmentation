@@ -1,0 +1,62 @@
+# Clothes Segmentation Configuration (U-Net with Pretrained ResNet-34 Encoder)
+# Assignment: CVCY002 (Computer Vision Engineer)
+# Hardware target: NVIDIA Quadro T2000 (4 GB GPU, strict 3072 MiB budget)
+
+experiment:
+  name: "atr_resnet34_unet"
+  seed: 42
+  device: "auto"
+  output_dir: "artifacts/runs/atr_resnet34_unet"
+
+data:
+  dataset: "atr"
+  data_dir: "data/processed"
+  splits_dir: "data/splits"
+  raw_dir: "data/raw"
+  batch_size: 16
+  num_workers: 4
+  image_size: 256
+  random_flip: true
+  color_jitter: true
+  # Garment label IDs to map to binary clothes mask:
+  # 4: Upper-clothes, 5: Skirt, 6: Pants, 7: Dress, 8: Belt, 17: Scarf
+  # Excluded: accessories (0: Background, 1: Hat, 3: Sunglasses, 16: Bag)
+  # Excluded: footwear (9: Left-shoe, 10: Right-shoe)
+  # Excluded: body parts (2: Hair, 11: Face, 12: Left-leg, 13: Right-leg, 14: Left-arm, 15: Right-arm)
+  clothes_ids:
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 17
+
+model:
+  name: "resnet34_unet"
+  in_channels: 3
+  out_channels: 1
+  pretrained: true
+
+loss:
+  bce_weight: 1.0
+  dice_weight: 1.0
+  smooth: 1.0
+
+training:
+  epochs: 15
+  lr: 0.0003
+  weight_decay: 0.0001
+  warmup_steps: 500
+  grad_accum_steps: 1
+  gradient_clip_val: 1.0
+  save_every: 5
+  eval_every: 1
+
+evaluation:
+  batch_size: 16
+  threshold: 0.5
+  target_iou: 0.80
+  target_dice: 0.88
+
+verify:
+  memory_budget_mib: 3072

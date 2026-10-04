@@ -1,0 +1,53 @@
+experiment:
+  name: atr_resnet34_unet
+  seed: 42
+  device: auto
+  output_dir: artifacts/runs/atr_resnet34_unet
+data:
+  dataset: atr
+  data_dir: data/processed
+  splits_dir: data/splits
+  raw_dir: data/raw
+  batch_size: 16
+  num_workers: 4
+  image_size: 256
+  random_flip: true
+  color_jitter: true
+  clothes_ids:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 17
+model:
+  name: resnet34_unet
+  in_channels: 3
+  out_channels: 1
+  pretrained: true
+  features:
+  - 32
+  - 64
+  - 128
+  - 256
+loss:
+  bce_weight: 1.0
+  dice_weight: 1.0
+  smooth: 1.0
+  pos_weight: null
+training:
+  epochs: 15
+  lr: 0.0003
+  weight_decay: 0.0001
+  warmup_steps: 500
+  grad_accum_steps: 1
+  gradient_clip_val: 1.0
+  save_every: 5
+  eval_every: 1
+evaluation:
+  batch_size: 16
+  threshold: 0.5
+  target_iou: 0.8
+  target_dice: 0.88
+verify:
+  memory_budget_mib: 3072

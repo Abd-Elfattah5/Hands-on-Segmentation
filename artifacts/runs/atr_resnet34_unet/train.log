@@ -1,0 +1,17 @@
+2026-10-04T15:04:30+0300 [INFO] seg.trainer.atr_resnet34_unet: Starting training on device=cuda for 15 epochs. Train samples: 14164, Val samples: 1770
+2026-10-04T15:09:43+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 01/15 (313.1s) | Train Loss: 0.8074 (IoU: 0.7519, Dice: 0.8438) | Val Loss: 0.4025 (Val IoU: 0.8250, Val Dice: 0.8980) [★ BEST VAL IOU]
+2026-10-04T15:15:12+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 02/15 (328.1s) | Train Loss: 0.2758 (IoU: 0.8397, Dice: 0.9080) | Val Loss: 0.1968 (Val IoU: 0.8572, Val Dice: 0.9188) [★ BEST VAL IOU]
+2026-10-04T15:20:42+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 03/15 (327.5s) | Train Loss: 0.1759 (IoU: 0.8601, Dice: 0.9209) | Val Loss: 0.1580 (Val IoU: 0.8692, Val Dice: 0.9261) [★ BEST VAL IOU]
+2026-10-04T15:26:29+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 04/15 (344.5s) | Train Loss: 0.1512 (IoU: 0.8702, Dice: 0.9272) | Val Loss: 0.1467 (Val IoU: 0.8720, Val Dice: 0.9274) [★ BEST VAL IOU]
+2026-10-04T15:32:18+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 05/15 (346.7s) | Train Loss: 0.1382 (IoU: 0.8781, Dice: 0.9321) | Val Loss: 0.1344 (Val IoU: 0.8818, Val Dice: 0.9339) [★ BEST VAL IOU]
+2026-10-04T15:37:59+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 06/15 (338.6s) | Train Loss: 0.1268 (IoU: 0.8857, Dice: 0.9368) | Val Loss: 0.1289 (Val IoU: 0.8849, Val Dice: 0.9357) [★ BEST VAL IOU]
+2026-10-04T15:43:52+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 07/15 (350.7s) | Train Loss: 0.1185 (IoU: 0.8918, Dice: 0.9406) | Val Loss: 0.1242 (Val IoU: 0.8894, Val Dice: 0.9382) [★ BEST VAL IOU]
+2026-10-04T15:49:28+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 08/15 (334.3s) | Train Loss: 0.1122 (IoU: 0.8965, Dice: 0.9435) | Val Loss: 0.1166 (Val IoU: 0.8937, Val Dice: 0.9410) [★ BEST VAL IOU]
+2026-10-04T15:55:14+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 09/15 (343.9s) | Train Loss: 0.1060 (IoU: 0.9017, Dice: 0.9467) | Val Loss: 0.1115 (Val IoU: 0.8989, Val Dice: 0.9443) [★ BEST VAL IOU]
+2026-10-04T16:01:05+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 10/15 (349.5s) | Train Loss: 0.1004 (IoU: 0.9063, Dice: 0.9494) | Val Loss: 0.1107 (Val IoU: 0.8999, Val Dice: 0.9447) [★ BEST VAL IOU]
+2026-10-04T16:06:57+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 11/15 (349.4s) | Train Loss: 0.0958 (IoU: 0.9100, Dice: 0.9517) | Val Loss: 0.1082 (Val IoU: 0.9024, Val Dice: 0.9460) [★ BEST VAL IOU]
+2026-10-04T16:12:42+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 12/15 (342.8s) | Train Loss: 0.0928 (IoU: 0.9125, Dice: 0.9531) | Val Loss: 0.1067 (Val IoU: 0.9032, Val Dice: 0.9466) [★ BEST VAL IOU]
+2026-10-04T16:19:29+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 13/15 (405.6s) | Train Loss: 0.0901 (IoU: 0.9148, Dice: 0.9545) | Val Loss: 0.1056 (Val IoU: 0.9044, Val Dice: 0.9474) [★ BEST VAL IOU]
+2026-10-04T16:25:20+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 14/15 (349.3s) | Train Loss: 0.0884 (IoU: 0.9162, Dice: 0.9553) | Val Loss: 0.1048 (Val IoU: 0.9050, Val Dice: 0.9478) [★ BEST VAL IOU]
+2026-10-04T16:31:07+0300 [INFO] seg.trainer.atr_resnet34_unet: Epoch 15/15 (345.4s) | Train Loss: 0.0876 (IoU: 0.9170, Dice: 0.9558) | Val Loss: 0.1048 (Val IoU: 0.9052, Val Dice: 0.9478) [★ BEST VAL IOU]
+2026-10-04T16:31:10+0300 [INFO] seg.trainer.atr_resnet34_unet: Training completed in 86.7 minutes. Best Val IoU: 0.9052

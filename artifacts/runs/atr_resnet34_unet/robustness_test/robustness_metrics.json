@@ -1,0 +1,82 @@
+{
+  "clean": {
+    "description": "No change (reference)",
+    "iou": 0.9035002481587584,
+    "dice": 0.9470377313835088,
+    "precision": 0.9429599932367592,
+    "recall": 0.955206440009059,
+    "iou_drop": 0.0
+  },
+  "dark": {
+    "description": "Dim lighting, brightness x0.4",
+    "iou": 0.8935622663545143,
+    "dice": 0.9410372716353672,
+    "precision": 0.9346952223834953,
+    "recall": 0.9521184785756163,
+    "iou_drop": 0.0099379818042441
+  },
+  "overexposed": {
+    "description": "Overexposed, brightness x1.8",
+    "iou": 0.8369222758358879,
+    "dice": 0.9048159670286536,
+    "precision": 0.8971090730506733,
+    "recall": 0.9239695209638756,
+    "iou_drop": 0.06657797232287055
+  },
+  "low_contrast": {
+    "description": "Haze / flat light, contrast x0.4",
+    "iou": 0.891382132457153,
+    "dice": 0.9396738303882022,
+    "precision": 0.9328076853910903,
+    "recall": 0.9513771995874731,
+    "iou_drop": 0.01211811570160537
+  },
+  "grayscale": {
+    "description": "No colour information",
+    "iou": 0.7977555181587254,
+    "dice": 0.8800778926915698,
+    "precision": 0.833622440636898,
+    "recall": 0.9506871889578704,
+    "iou_drop": 0.10574473000003304
+  },
+  "blur": {
+    "description": "Out of focus / motion, Gaussian blur sigma=3",
+    "iou": 0.2474506056961001,
+    "dice": 0.30748453732080655,
+    "precision": 0.9428841401706537,
+    "recall": 0.26355520217062806,
+    "iou_drop": 0.6560496424626583
+  },
+  "low_resolution": {
+    "description": "Low resolution, 4x down/up-sampled",
+    "iou": 0.5968755250223671,
+    "dice": 0.6765071735088016,
+    "precision": 0.9235904560726848,
+    "recall": 0.6453477279465794,
+    "iou_drop": 0.30662472313639133
+  },
+  "noise": {
+    "description": "Sensor noise, Gaussian std=0.08",
+    "iou": 0.6890448087996728,
+    "dice": 0.7883746049242925,
+    "precision": 0.7174513438321297,
+    "recall": 0.949092025244216,
+    "iou_drop": 0.21445543935908562
+  },
+  "rotated_30": {
+    "description": "Tilted camera, 30 degree rotation",
+    "iou": 0.859407908545437,
+    "dice": 0.9186144164962059,
+    "precision": 0.919042158653249,
+    "recall": 0.9274224743901901,
+    "iou_drop": 0.044092339613321374
+  },
+  "upper_body_crop": {
+    "description": "Close-up framing, top half zoomed 2x",
+    "iou": 0.8459318099205616,
+    "dice": 0.905809356593149,
+    "precision": 0.9254529734102577,
+    "recall": 0.9057390207153135,
+    "iou_drop": 0.057568438238196795
+  }
+}

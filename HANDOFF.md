@@ -1,10 +1,10 @@
 # HANDOFF: Hands-on Segmentation (Clothes Segmentation, Assignment CVCY002)
 
-**Repository**: `/home/amousa1/Projects/Hands-on Segmentation` (git, branch `main`, no remote yet)
+**Repository**: `/home/amousa1/Projects/Hands-on Segmentation` (git, branch `main`, remote `origin` = https://github.com/Abd-Elfattah5/Hands-on-Segmentation)
 **Assignment**: `docs/CYCV002.pdf` (task code CVCY002, "Computer Vision Engineer")
 **Sibling repos to copy conventions from**: `/home/amousa1/Projects/Hands-on DDPM` (most recent, preferred) and `/home/amousa1/Projects/Hands-on VAE`
 **Created**: 2026-10-03 · **Deadline**: 2026-10-04 night (about 28 h from creation)
-**Status (2026-10-04)**: Implemented, trained and evaluated (test IoU 0.9035, Dice 0.9470). Report and README written. Personal photos done (EXIF-orientation and HEIC fixes added). Architecture docs added (`ARCHITECTURE_DEEP_DIVE.md`, `Architecture_visualization.jpg`, `architectural_enhancements_taxonomy.html`, `CONTEXT.md`, ADR 0001). Remaining: run graphify, commit `graphify-out/`, create the GitHub repo and push. The local T2000 is free for the DDPM benchmark.
+**Status (2026-10-04)**: Implemented, trained and evaluated (test IoU 0.9035, Dice 0.9470). Report and README written. Personal photos done (EXIF-orientation and HEIC fixes added). Architecture docs added (`ARCHITECTURE_DEEP_DIVE.md`, `Architecture_visualization.jpg`, `architectural_enhancements_taxonomy.html`, `CONTEXT.md`, ADR 0001). Graphify knowledge graph committed. Published to https://github.com/Abd-Elfattah5/Hands-on-Segmentation (public); `best_checkpoint.pt` is the v1.0.0 release asset. The local T2000 is free for the DDPM benchmark.
 
 ---
 

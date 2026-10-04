@@ -61,6 +61,14 @@ seg train -c configs/atr_unet.yaml --resume artifacts/runs/atr_resnet34_unet/lat
 
 The run directory (`artifacts/runs/atr_resnet34_unet/`) contains `latest.pt`, `best_checkpoint.pt` (highest validation IoU), `final_checkpoint.pt`, periodic `checkpoint_epoch_NNN.pt`, `metrics.json`, `learning_curves.png`, `train.log` and `resolved_config.yaml`.
 
+**Pretrained weights**: the reported run's logs, metrics, galleries and predictions are committed under `artifacts/`. The checkpoints (280 MB each) exceed GitHub's file limit, so `best_checkpoint.pt` is published as a release asset. Download it to skip training:
+
+```bash
+gh release download v1.0.0 -R Abd-Elfattah5/Hands-on-Segmentation -p best_checkpoint.pt -D artifacts/runs/atr_resnet34_unet
+```
+
+Or download it from the [v1.0.0 release page](https://github.com/Abd-Elfattah5/Hands-on-Segmentation/releases/tag/v1.0.0).
+
 ## 5. Evaluate
 
 ```bash

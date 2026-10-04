@@ -31,9 +31,9 @@ wheels/
 
 # Data & Model Artifacts
 /data/
-artifacts/
+# artifacts/ is tracked (logs, metrics, galleries, predictions); checkpoints (*.pt) are published as a GitHub Release asset
 checkpoints/
-runs/
+/runs/
 *.pt
 *.pth
 *.onnx

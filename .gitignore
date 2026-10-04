@@ -57,6 +57,10 @@ token.txt
 kaggle.json
 .kaggle/
 
+# Graphify local interpreter & cache
+graphify-out/.graphify_*
+graphify-out/cache/
+
 # Personal test photos (private; keep only the folder)
 samples/personal/*
 !samples/personal/.gitkeep
